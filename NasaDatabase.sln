@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.539
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "NasaDatabase\API.csproj", "{37A2627D-F693-4CBA-B9F0-41C53FAF8026}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetNasaData", "GetNasaData\GetNasaData.csproj", "{8A5691E7-3BAB-47EA-B181-5C2446DA0BFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{7E007D4A-9B9F-4396-B418-F01B9CF8CB32}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37A2627D-F693-4CBA-B9F0-41C53FAF8026}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37A2627D-F693-4CBA-B9F0-41C53FAF8026}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37A2627D-F693-4CBA-B9F0-41C53FAF8026}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37A2627D-F693-4CBA-B9F0-41C53FAF8026}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A5691E7-3BAB-47EA-B181-5C2446DA0BFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A5691E7-3BAB-47EA-B181-5C2446DA0BFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A5691E7-3BAB-47EA-B181-5C2446DA0BFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A5691E7-3BAB-47EA-B181-5C2446DA0BFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E007D4A-9B9F-4396-B418-F01B9CF8CB32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E007D4A-9B9F-4396-B418-F01B9CF8CB32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E007D4A-9B9F-4396-B418-F01B9CF8CB32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E007D4A-9B9F-4396-B418-F01B9CF8CB32}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B616861C-DBE8-48FC-B681-435411CD6E74}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,8 @@
+<button (click)="this.changeGlobeVisibility()">Show GLobe</button>
+
+<mat-card class="globeContainer" [@slideInOut]="visible">
+  <mat-card-content>
+    <app-engine></app-engine>
+  </mat-card-content>
+</mat-card>
+
