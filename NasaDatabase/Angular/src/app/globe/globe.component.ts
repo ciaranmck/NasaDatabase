@@ -1,8 +1,6 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { trigger, transition, animate, style } from '@angular/animations';
 
-import { NasaDatabaseService } from '../shared/api/nasa-database.service';
-
 import Fireball from '../shared/models/Fireball';
 
 @Component({
@@ -16,7 +14,7 @@ import Fireball from '../shared/models/Fireball';
         animate('2000ms ease-in', style({ transform: 'translateY(0%)' }))
       ]),
       transition(':leave', [
-        animate('200ms ease-in', style({ transform: 'translateX(50%)' }))
+        animate('2000ms ease-in', style({ transform: 'translateX(100%)' }))
       ])
     ])
   ]
@@ -24,22 +22,13 @@ import Fireball from '../shared/models/Fireball';
 
 export class GlobeComponent implements OnInit {
   fireballData: Fireball[] = [];
-  visible = false;
+  visible = true;
 
   constructor(
-    private nasaDatabaseService: NasaDatabaseService,
-    private cdr: ChangeDetectorRef
+    private cdr: ChangeDetectorRef,
   ) {}
 
   ngOnInit() {
-    this.getAllFireballData();
-  }
-
-  public getAllFireballData(): void {
-    this.nasaDatabaseService.getAllFireballs().subscribe(fireBallData => {
-      this.fireballData = fireBallData;
-      console.log('fireballData: ', this.fireballData);
-    });
   }
 
   public changeGlobeVisibility(): void {

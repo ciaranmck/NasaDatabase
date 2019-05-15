@@ -8,7 +8,7 @@ using System.Web;
 
 namespace Common.BL
 {
-    public class FireballLogic
+    public class FireballLogic : IFireballLogic
     {
         private NasaDbContext db = new NasaDbContext();
 

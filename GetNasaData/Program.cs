@@ -1,5 +1,6 @@
 ﻿using Common.BL;
 using Common.Models;
+using log4net;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -12,14 +13,20 @@ namespace GetNasaData
 {
     class Program
     {
+        private static readonly string Url = "https://ssd-api.jpl.nasa.gov/fireball.api";
+
         static async Task Main(string[] args)
         {
-            string Url = "https://ssd-api.jpl.nasa.gov/fireball.api";
+            log4net.Config.BasicConfigurator.Configure();
+            ILog log = log4net.LogManager.GetLogger(typeof(Program));
+            log.Info("Starting");
 
-            HttpClient client = new HttpClient();
-            HttpResponseMessage response = await client.GetAsync(Url);
-            HttpContent content = response.Content;
-            FireballLogic fireballLogic = new FireballLogic();
+            try
+            {
+                HttpClient client = new HttpClient();
+                HttpResponseMessage response = await client.GetAsync(Url);
+                HttpContent content = response.Content;
+                IFireballLogic fireballLogic = new FireballLogic();
 
                 string result = await content.ReadAsStringAsync();
 
@@ -41,6 +48,12 @@ namespace GetNasaData
 
                     await fireballLogic.Post(fireball);
                 }
+            }
+            catch (Exception ex)
+            {
+                log.Error("Error Fetching Data", ex);
+            }
+            log.Info("Closing Application");
         }
     }
 }

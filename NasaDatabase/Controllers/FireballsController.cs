@@ -9,9 +9,9 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
-using NasaDatabase.BL;
-using NasaDatabase.Data;
-using NasaDatabase.Models;
+using Common.BL;
+using Common.Data;
+using Common.Models;
 
 namespace NasaDatabase.Controllers
 {

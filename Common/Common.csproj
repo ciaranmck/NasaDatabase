@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BL\FireballLogic.cs" />
+    <Compile Include="BL\IFireballLogic.cs" />
     <Compile Include="Data\NasaDbContext.cs" />
     <Compile Include="Models\Fireball.cs" />
     <Compile Include="Models\NasaFireballData.cs" />

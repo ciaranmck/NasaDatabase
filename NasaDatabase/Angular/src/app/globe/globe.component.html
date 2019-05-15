@@ -1,6 +1,6 @@
-<button (click)="this.changeGlobeVisibility()">Show GLobe</button>
+<button (click)="changeGlobeVisibility()">Show GLobe</button>
 
-<mat-card class="globeContainer" [@slideInOut]="visible">
+<mat-card class="globeContainer" *ngIf="visible" [@slideInOut]>
   <mat-card-content>
     <app-engine></app-engine>
   </mat-card-content>

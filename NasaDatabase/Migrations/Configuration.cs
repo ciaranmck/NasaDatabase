@@ -5,14 +5,14 @@ namespace NasaDatabase.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<NasaDatabase.Data.NasaDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<Common.Data.NasaDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(NasaDatabase.Data.NasaDbContext context)
+        protected override void Seed(Common.Data.NasaDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 
